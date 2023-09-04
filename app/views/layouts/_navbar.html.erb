@@ -1,0 +1,24 @@
+<div class="navbar">
+            <div class="icon">
+                <%= image_tag("logo2.png", id:"logo", alt:"Logo")%>
+            </div>
+            <div class="menu">
+            <%if current_user%>
+                <ul>
+                    <li><%= link_to "HOME", root_path,class:'link-text'%></li>
+                    <li><%= link_to "ABOUT", about_path, class:'link-text'%></a></li>
+                    <li> <%= link_to current_user.name, edit_user_registration_path, class:'link-text'%> </li>
+                    <li>  <%= link_to "Sign Out", destroy_user_session_path, data: {
+                    turbo_method: :delete, class:'link-text'}%>  </li>
+
+                </ul>
+            <%else%>
+                <ul>
+                    <li><%= link_to "HOME", root_path, class:'link-text'%></li>
+                    <li><%= link_to "ABOUT", about_path, class:'link-text'%></a></li>
+                    <li><%= link_to "LOG IN", new_user_session_path, class:'link-text'%></li>
+                </ul>
+            <%end%>
+
+            </div>
+        </div> 
