@@ -1,6 +1,7 @@
 <div class="navbar">
             <div class="icon">
-                <%= image_tag("logo2.png", id:"logo", alt:"Logo")%>
+
+                <%=link_to  image_tag("logo2.png", id:"logo", alt:"Logo"), root_path%>
             </div>
             <div class="menu">
             <%if current_user%>

@@ -1,0 +1,142 @@
+ <head>
+ <%= stylesheet_link_tag "dashboard.css"%>
+ <%= javascript_import_module_tag "script"%>
+ </head>
+ <div class="dashboard">
+        <section class="navigation">
+            <%= image_tag("Logopng.png", alt:"Code Verse Hub", class:"dashboard-logo")%>
+            <div>
+                <%= image_tag("dashboard_icon.png", alt:"dashboard", class:"icons")%>
+                <%= image_tag("lesson_icon.png", alt:"lesson", class:"icons")%>
+                <%= image_tag("settings_icon.png", alt:"settings", class:"icons")%>
+               <!-- <img src="asset/images/001-quiz.png" alt="quiz" class="icons"> *optional kung lalagyan ng quizzes*-->
+            </div>
+            <%= image_tag("User_Avatar.png", alt:"user image", class:"user")%>
+
+        </section>
+        
+        <section class="main">
+            <section class="main"><!-- Main -->
+    
+    
+  <div class="title">
+            <h1>My Lessons</h1>
+
+        </div>
+
+        <div class="lesson_list"> <!--lesson list-->
+            <%=render 'dashboard'%>
+            <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 1-->  
+                <div class="category">
+                    <h2>Exp topic</h2><!--edit this para sa content or topic-->
+                    <p>status of lesson</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                   
+                    <ul class="activity">
+                        <li>example </li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 1-->
+
+            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 2-->
+                <div class="category">
+                    <h2>wally</h2><!--edit this para sa content or topic-->
+                    <p>Active recently</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    
+                    <ul class="activity">
+                        <li> may blod</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 2-->
+
+            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 3-->
+                <div class="category">
+                    <h2> love story</h2><!--edit this para sa content or topic-->
+                    <p>ongoing</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> jeff loves kristine</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 3-->
+
+            <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 4-->
+                <div class="category">
+                    <h2> Topic 4</h2><!--edit this para sa content or topic-->
+                    <p>Paulol</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> erwin skincare tutorial</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 4-->
+
+            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 5-->
+                <div class="category">
+                    <h2> Topic 5</h2><!--edit this para sa content or topic-->
+                    <p>bentahan ng shabu</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> turuan kayo ni carlos mag abot</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 5-->
+
+            <div class="lesson" data-status="stalled" title="Stalled lesson"> <!--proj 6-->
+                <div class="category">
+                    <h2> Topic 6</h2><!--edit this para sa content or topic-->
+                    <p>pano mag pauwi ng lasing</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> tutorial by gen</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 6-->
+
+        </div> <!--lesson list end-->
+        </section>
+
+        <section class="secondary"> <!--Secondary-->
+            <div class="chart">
+                <h2>Total Lessons</h2>
+                <div>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+                <div class="complete">
+                    <h3>Completed</h3>
+                    <p>From 5 projects
+                    </p>
+                </div>
+            </div>
+            <div class="recent_project"> <!--recent proj-->
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>Finished</h2>
+                        </div>  
+                    </div>
+                </div>
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>Remaining</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>ongoing</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>Stalled</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--recent proj end-->
+        </section>
+    </div>
+
+    <!--Chart-->
+    <script src= "asset/js/script.js">
+ 
+    </script>

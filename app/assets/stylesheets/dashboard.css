@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0px;
+  background: linear-gradient(
+    to top,
+    rgba(167, 92, 88, 0.5) 20%,
+    rgb(167, 92, 88, 0.5) 80%
+  );
+}
+
+.dashboard {
+  padding: 0% 15px;
+  margin: 0 auto;
+}
+
+/*===============
+navigation
+===============*/
+
+.dashboard .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0px 80px 0px 30px;
+  background-color: white;
+  box-shadow: 1px 1px 40px rgba(0, 0, 0 / 0.01 alpha);
+  border-radius: 10px;
+  position: relative;
+}
+.dashboard-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-left: -19px;
+}
+.dashboard .navigation img.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-left: -19px;
+}
+.dashboard .navigation img.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.dashboard .navigation img.icons {
+  width: 40px;
+  height: 40px;
+}
+/*===============
+Main dashboard
+===============*/
+/* Search */
+.dashboard .main .search form {
+  position: relative;
+}
+.dashboard .main .search {
+  margin-top: 40px;
+}
+.dashboard .main .search form input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 10px 10px 60px;
+  border: 1px solid #dadada;
+  background-color: rgba(0 0 0 / 0);
+}
+.dashboard .main .search form span {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  color: #727272;
+}
+
+/*My lessons*/
+.dashboard .main .title {
+  margin-bottom: 30px;
+}
+.dashboard .main .title h1 {
+  font-size: 35px;
+  line-height: 0px;
+}
+.dashboard .main .title {
+  margin-top: 40px;
+}
+.dashboard .main .title label {
+  margin-right: px;
+  color: #727272;
+  font-size: 16px;
+}
+.dashboard .main .title select {
+  border: none;
+  font-size: 16px;
+  background-color: rgba(0 0 0/ 0);
+}
+
+/*---------------------------------------------------------------*/
+
+/*My lessons list*/
+.dashboard .main .lesson_list .lesson h2 {
+  font-size: 20px;
+  line-height: 0;
+}
+
+.dashboard .main .lesson_list .lesson p {
+  color: #727272;
+}
+.dashboard .main .lesson_list .lesson ul {
+  list-style: none;
+  position: relative;
+  margin-left: 0;
+  padding-left: 0px;
+}
+.dashboard .main .lesson_list .lesson ul li {
+  position: relative;
+  color: #727272;
+  margin-left: 15px;
+}
+.dashboard .main .lesson_list .lesson ul li::before {
+  content: "\268A";
+  position: absolute;
+  left: -15px;
+  top: 0px;
+}
+.dashboard .main .lesson_list .lesson {
+  padding: 20px 20px 40px 37px;
+  background-color: white;
+  box-shadow: 1px 1px 40px rgba(0, 0, 0 / 0.01 alpha);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/*Chart*/
+.dashboard .secondary .chart {
+  margin-right: 100px;
+}
+.dashboard .secondary .chart .complete {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.dashboard .secondary .chart .complete h3 {
+  line-height: 0px;
+}
+.dashboard .secondary .chart .complete p {
+  color: #727272;
+  margin: 5px;
+}
+
+.dashboard .secondary .chart {
+  background-color: white;
+  padding: 15px;
+  position: relative;
+}
+
+/*Recent project*/
+.dashboard .secondary .recent_project .listing h2 {
+  line-height: 0px;
+  padding: 20px 20px 20px 20px;
+}
+.dashboard .secondary .recent_project .listing p {
+  color: #727272;
+}
+.dashboard .secondary .recent_project .listing {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard .secondary .recent_project {
+  background-color: white;
+  padding: 15px 15px 15px 60px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/*=========
+Media screen 768xp
+============*/
+@media only screen and (min-width: 768px) {
+  section.main .lesson_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  section.main .lesson_list .lesson {
+    width: 49%;
+  }
+
+  /* Recent Lessons*/
+  section.secondary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: white;
+    padding-top: 70px;
+  }
+  section.secondary .chart {
+    width: 40%;
+  }
+  section.secondary .recent_project {
+    width: 55%;
+  }
+}
+
+/*=========
+Media screen 1024px
+============*/
+@media only screen and (min-width: 1024px) {
+  .dashboard .navigation,
+  .dashboard .navigation div img,
+  section.secondary {
+    display: block;
+  }
+  .dashboard .navigation {
+    width: 60px;
+    position: fixed;
+    z-index: 10;
+  }
+  section.main {
+    width: 60%;
+    margin-left: 90px;
+    margin-right: 20px;
+  }
+  section.secondary {
+    width: 27%;
+    padding-top: 0px;
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    background-color: transparent;
+  }
+  section.secondary .chart,
+  section.secondary .recent_project {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .dashboard .navigation div {
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+  }
+  .dashboard .navigation img {
+    margin-top: 5vh;
+  }
+}
+/*=========
+Media screen 1024px
+============*/
+@media only screen and (min-width: 1111px) {
+  section.main .lesson_list .lesson {
+    width: 32%;
+  }
+  section.main {
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  section.secondary .recent_project .listing:nth-child(4) {
+    display: none;
+  }
+}
+/*My lessons end*/
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
