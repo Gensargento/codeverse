@@ -4,6 +4,7 @@
  </head>
  <div class="dashboard">
         <section class="navigation">
+            <%= button_to "Sign Out", destroy_user_session_path, method: :delete%>
             <%= image_tag("Logopng.png", alt:"Code Verse Hub", class:"dashboard-logo")%>
             <div>
                 <%= image_tag("dashboard_icon.png", alt:"dashboard", class:"icons")%>
@@ -136,6 +137,7 @@
         </section>
     </div>
 
+    <%= javascript_importmap_tags %>
     <!--Chart-->
     <script src= "asset/js/script.js">
  

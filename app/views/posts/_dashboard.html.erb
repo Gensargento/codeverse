@@ -1,9 +1,18 @@
+
 <div id="posts" class="lesson" data-status="finished">
                 <div class="category">
                     <% @posts.each do |post|%>
                     <h2><%= post.title %> </h2>
-                    <p> Status of Lesson </p>
-                    <% end %>
+                    <%current_lesson = Lesson.find_by(user_id: current_user.id)%>
+                    <%if current_lesson.number == post.id%>
+                        <%if current_lesson.is_completed == true%>
+                            <p> Status:  Completed </p>
+                        <%else%>
+                            <p> Status: Ongoing </p>
+                        <%end%>
+                    <%end%>
+                <% end %>
+
                 </div>
 </div><!--proj 1-->
 

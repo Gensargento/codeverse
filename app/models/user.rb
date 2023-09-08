@@ -1,11 +1,11 @@
 class User < ApplicationRecord
   attr_writer :login
+  has_many :lessons 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, authentication_keys: [:login]
   validates :name, uniqueness: true 
-  has_many :lessons 
 
   def login
     @login || self.name
