@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+gen = User.create([{name: "gensargento" }, {password: "123456" }, {password_confirmation: "123456"}])
+ricsel = User.create([{name: "ricsel"}, {password: "123456" }, {password_confirmation: "123456"}])
+Lesson.create([{number: 1 }, {user_id: gen.id}])
+Lesson.create([{number: 1}, {user_id: ricsel.id}]

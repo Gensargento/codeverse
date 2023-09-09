@@ -135,6 +135,20 @@ Main dashboard
   position: relative;
 }
 
+.dashboard .main .lesson_list .dashboard_lesson .lesson {
+  padding: 20px 20px 40px 37px;
+  width: 207.52px;
+  height: 136px;
+  background-color: white;
+  box-shadow: 1px 1px 40px rgba(0, 0, 0 / 0.01 alpha);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.dashboard .main .lesson_list .dashboard_lesson .lesson .category h2 {
+  margin-bottom: 10px;
+}
 /*Chart*/
 .dashboard .secondary .chart {
   margin-right: 100px;

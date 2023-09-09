@@ -8,7 +8,8 @@
     # Defines the root path route ("/")
   # root "articles#index"
   get "about", to: "pages#about"
-  get "dashboard", to: "posts#dashboard"
+  get "dashboard", to: "lessons#dashboard"
+  get "show_lessons", to: "lessons#show_lessons"
   authenticated :user do
      root to: 'posts#dashboard', as: :authenticated_root
   end

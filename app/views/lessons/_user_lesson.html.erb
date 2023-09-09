@@ -1,0 +1,20 @@
+<div id="<%= dom_id lesson %>" class="dashboard_lesson">
+    <%post = Post.find_by(id: lesson.number)%>
+        <%if lesson.is_completed == true%>
+            <div id="posts" class="lesson" data-status="finished">
+                <div class="category">
+                <h2> <%= post.title%> </h2>
+                 <p> Status:  Completed </p>
+                <%= link_to "Show this Lesson", post%>
+                </div>
+            </div>
+        <%else%>
+            <div id="posts" class="lesson" data-status="ongoing">
+                <div class="category">
+                <h2> <%= post.title%> </h2>
+                <p> Status:  Ongoing </p>
+                <%= link_to "Show this Lesson", post%>
+                </div>
+            </div>
+        <%end%>
+</div>

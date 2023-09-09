@@ -10,6 +10,21 @@ class LessonsController < ApplicationController
   def show
   end
 
+  def show_lessons
+    @lessons = lessons_by_user
+  end
+
+  def dashboard
+    @lessons = lessons_by_user
+  end
+
+  def lessons_by_user
+    lessons = Lesson.all 
+    lessons.select do |lesson|
+    lesson.user_id == current_user.id
+    end
+  end
+
   # GET /lessons/new
   def new
     @lesson = Lesson.new

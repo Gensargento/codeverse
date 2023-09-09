@@ -1,0 +1,4 @@
+<% @lessons.each do |lesson|%>
+<%post = Post.find_by(id: lesson.number)%>
+<%= render partial:"user_lesson", locals: {lesson: lesson, post: post}%>
+ <%end%>

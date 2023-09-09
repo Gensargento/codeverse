@@ -25,8 +25,13 @@
 
         </div>
 
-        <div class="lesson_list"> <!--lesson list-->
-            <%=render 'dashboard'%>
+        <div class="lesson_list"> 
+        
+        <% @lessons.each do |lesson|%>
+        <%post = Post.find_by(id: lesson.number)%>
+        <%= render partial:"user_lesson", locals: {lesson: lesson, post: post}%>
+        <%end%>
+<!--lesson list-->
             <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 1-->  
                 <div class="category">
                     <h2>Exp topic</h2><!--edit this para sa content or topic-->
