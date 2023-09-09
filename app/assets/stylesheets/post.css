@@ -1,0 +1,139 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+
+}
+/*=====================sidebar===================*/
+
+.body {
+background: linear-gradient(
+  to top,
+  rgba(167, 92, 88, 0.5) 100%
+  );
+}
+
+.wrapper {
+  background: rgb(167, 92, 88, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 2s ease;
+}
+.wrapper .sidebar .username {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.wrapper .sidebar .username h3 {
+  font-size: 40px;
+  margin: 10, 0 5px;
+}
+.wrapper .sidebar lu li a{
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+/*
+.wrapper .sidebar lu li a .icon{
+  margin: 0 auto;
+  display: inline-block;
+}
+*/
+
+
+
+
+
+/*==========hover==================*/
+.wrapper .sidebar lu li a:hover,
+.wrapper .sidebar lu li a:hover.active {
+  color: black;
+  background: white;
+  border-right: 2px solid rgba(167, 92, 88, 0.5);
+}
+.wrapper .sidebar lu li a:hover::before,
+.wrapper .sidebar lu li a:hover.active::before {
+  display: block;
+}
+.wrapper .section {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5 ease;
+}
+.wrapper .section .top_navbar {
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+.wrapper .section .top_navbar .hamburger a{
+  font-size: 28px;
+  border: 4px;
+}
+.wrapper .section .top_navbar .hamburger a:hover{
+  border: 4px;
+}
+body.active .wrapper .sidebar{
+  left: -225px;
+}
+
+body.active .wrapper .section{
+  margin-left: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+/*========================================*/
+.post_background {
+    background-color:white;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 80px;
+    justify-content: center;
+}
+.Navdesign {
+  background-color: aqua;
+  color: whitesmoke;
+  padding: 10px 10px;
+  font-size: 16px;
+  position: flex;
+}
+
+.LessonNav .span {
+  background-color: white;
+  width: 60%;
+  margin-bottom: 0;
+}
+.Navplatform {
+  background-color: gray;
+  border-radius: 20px;
+  bottom: 0;
+  left: 0;
+  max-width: 61.5rem;
+  position: fixed;
+  left: 40%;
+}
+
+
+.post_background .titleh1 {
+  margin: 0, 0, 0 ,0;
+  font-size: 20px;
+}
