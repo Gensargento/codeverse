@@ -1,5 +1,5 @@
 const ctx = document.getElementById("myChart");
-
+let finishedLessons = parseInt(document.getElementById("completed"));
 new Chart(ctx, {
   type: "doughnut",
   data: {
@@ -7,7 +7,7 @@ new Chart(ctx, {
     datasets: [
       {
         label: "# of Votes",
-        data: [2, 2, 1],
+        data: [finishedLessons, 2, 0],
         borderWidth: 1,
       },
     ],

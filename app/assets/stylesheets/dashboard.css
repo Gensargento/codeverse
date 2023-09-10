@@ -103,7 +103,7 @@ Main dashboard
 /*My lessons list*/
 .dashboard .main .lesson_list .lesson h2 {
   font-size: 20px;
-  line-height: 0;
+  line-height: 1;
 }
 
 .dashboard .main .lesson_list .lesson p {
@@ -126,19 +126,23 @@ Main dashboard
   left: -15px;
   top: 0px;
 }
+.dashboard .main .lesson_list {
+  display: flex;
+}
 .dashboard .main .lesson_list .lesson {
-  padding: 20px 20px 40px 37px;
+  padding: 20px 20px 60px 37px;
   background-color: white;
   box-shadow: 1px 1px 40px rgba(0, 0, 0 / 0.01 alpha);
   margin-bottom: 20px;
   border-radius: 10px;
-  position: relative;
 }
 
 .dashboard .main .lesson_list .dashboard_lesson .lesson {
-  padding: 20px 20px 40px 37px;
+  display: flex;
+  padding: 15px;
   width: 207.52px;
-  height: 136px;
+  line-height: 0.8;
+  height: 146px;
   background-color: white;
   box-shadow: 1px 1px 40px rgba(0, 0, 0 / 0.01 alpha);
   margin-bottom: 20px;

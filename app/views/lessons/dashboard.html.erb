@@ -26,74 +26,11 @@
         </div>
 
         <div class="lesson_list"> 
-        
+        <!--lesson list-->
         <% @lessons.each do |lesson|%>
         <%post = Post.find_by(id: lesson.number)%>
         <%= render partial:"user_lesson", locals: {lesson: lesson, post: post}%>
         <%end%>
-<!--lesson list-->
-            <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 1-->  
-                <div class="category">
-                    <h2>Exp topic</h2><!--edit this para sa content or topic-->
-                    <p>status of lesson</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
-                   
-                    <ul class="activity">
-                        <li>example </li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
-                    </ul>
-                </div>
-            </div><!--proj 1-->
-
-            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 2-->
-                <div class="category">
-                    <h2>wally</h2><!--edit this para sa content or topic-->
-                    <p>Active recently</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
-                    
-                    <ul class="activity">
-                        <li> may blod</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
-                    </ul>
-                </div>
-            </div><!--proj 2-->
-
-            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 3-->
-                <div class="category">
-                    <h2> love story</h2><!--edit this para sa content or topic-->
-                    <p>ongoing</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
-                    <ul class="activity">
-                        <li> jeff loves kristine</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
-                    </ul>
-                </div>
-            </div><!--proj 3-->
-
-            <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 4-->
-                <div class="category">
-                    <h2> Topic 4</h2><!--edit this para sa content or topic-->
-                    <p>Paulol</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
-                    <ul class="activity">
-                        <li> erwin skincare tutorial</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
-                    </ul>
-                </div>
-            </div><!--proj 4-->
-
-            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 5-->
-                <div class="category">
-                    <h2> Topic 5</h2><!--edit this para sa content or topic-->
-                    <p>bentahan ng shabu</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
-                    <ul class="activity">
-                        <li> turuan kayo ni carlos mag abot</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
-                    </ul>
-                </div>
-            </div><!--proj 5-->
-
-            <div class="lesson" data-status="stalled" title="Stalled lesson"> <!--proj 6-->
-                <div class="category">
-                    <h2> Topic 6</h2><!--edit this para sa content or topic-->
-                    <p>pano mag pauwi ng lasing</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
-                    <ul class="activity">
-                        <li> tutorial by gen</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
-                    </ul>
-                </div>
-            </div><!--proj 6-->
-
         </div> <!--lesson list end-->
         </section>
 
@@ -105,7 +42,8 @@
                 </div>
                 <div class="complete">
                     <h3>Completed</h3>
-                    <p>From 5 projects
+                    <p>From <%=pluralize(@post.length, "project")%> 
+
                     </p>
                 </div>
             </div>
@@ -113,7 +51,7 @@
                 <div class="listing">
                     <div class="tittle">
                         <div class="category">
-                            <h2>Finished</h2>
+                            <h2>Finished: <p id="finished"><%=@completed_lessons%></p></p></h2>
                         </div>  
                     </div>
                 </div>

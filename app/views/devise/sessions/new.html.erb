@@ -1,3 +1,9 @@
+  <head>
+ <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+ <%= stylesheet_link_tag "Loginstyle", "data-turbo-track": "reload" %>
+  </head>
+<main>
+<%= render 'layouts/navbar'%>
 <div class="wrapper">
 <h2>Log in</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,3 +30,4 @@
 <% end %>
 <%= render "devise/shared/links" %>
 </div>
+</main>

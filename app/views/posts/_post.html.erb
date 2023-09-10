@@ -1,96 +1,31 @@
 <head>
-<%= stylesheet_link_tag "dashboard.css" %>
+<%= stylesheet_link_tag "post.css" %>
 <%= javascript_import_module_tag "script" %>
 
 <body>
-<div class= "wrapper">
-
-<!--top menu bar--->
-<div class="section">
-  <div class="top_navbar">
-    <div class="hamburger">
-    <a href="#"><i class="menu_bar"> <%= image_tag("Menu_icon.png", class:"Menu", alt:"Hamburger")%> </i></a>
-    </div>
-  </div>
-</div>
-
-
-  <div class= "sidebar">
-  <div class= "Username">
-    <h3>   Username<h3>
-  </div>
-
-    <lu> 
+<div class="main">
+<div class= "sidebar">
+    <ul> 
+    <%if current_user%>
+    <li> <%= link_to current_user.name.capitalize, dashboard_path, id:"user-name"%></li>
+    <%end%>
     <li><a href="#" class="active"> 
     <!---<span class= "icon">  <%= image_tag("dashboards.png", class:"dashboard", alt:"Dashboard")%> </span>---->
-    <span class= "item">DASHBOARD</span> </a></li>
+    <span class= "item"><%= link_to "Dashboard", dashboard_path %></span> </a></li>
 
     <li><a href="#">
     <!---<span class= "icon">  <%= image_tag("sign_out.png", class:"signout", alt:"open_door")%> </span>---->
-    <span class= "item">SIGN OUT</span></a></li>
-    </lu>
-  </div>
+    <span class= "item"> <%= link_to "Sign out", destroy_user_session_path, data: {turbo_method: :delete} %></span></a></li>
+    </ul>
 
 </div>
 
-<script>
-  var hamburger = document.querySelector(".hamburger");
-    hamburger.addEventListener("click", function(){
-        document.querySelector("body").classList.toggle("active");
-    })
-  </script>
-
-
-
-<section class="post_background">
-<div id="<%= dom_id post %>">
-  <h1 class= "tittleh1">
-    <strong>Title:</strong>
+  <div id="<%= dom_id post %>" class="content">
+    <h1 class= "tittleh1">
     <%= post.title %></h1>
-
-  <div class= "content_body"> 
-  
-<!---- navigation of prev, complete and next lesson --->
-<strong>Body:</strong>
-
-<div class= "post_content"> 
-<div>
-  <%=post.body%>
-</div>
-</div>
-</div>
-
-</section>
-
-<!---- navigation of prev, complete and next lesson --->
-
-
-<div class= "Navplatform">
-
- <div class="Navicon">
- <%= image_tag("left.png", class:"left_icon", alt:"left_arrow" )%>
- <%= image_tag("right.png", class:"right_icon", alt:"right_arrow" )%>
- <%= image_tag("correct.png", class:"finish_icon", alt:"check" )%>
- </div>
-
-  <div>
-  <span>
-  <title>"Prev lesson"</title>
-  <button id="PrevButton" class="Navdesign"> Previous lesson</button>
-   
-  <title>"Complete lesson"</title>
-  <span> 
-  <ul>
-  <button id="CompButton" class="Navdesign"> Complete lesson </button>
-  </ul> </span>
-  
-  <title> "Next lesson" </title>
-  <button  id="NxtButton" class="Navdesign" >Next lesson</button>
-  </span>
+    <p>  <%=simple_format(post.body)%> </p>
   </div>
-
 </div>
-
 </body>
 
 </head>
