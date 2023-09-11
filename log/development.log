@@ -18997,3 +18997,1186 @@ Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 11:03:00 +0800
   
 ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
   
+Started GET "/" for ::1 at 2023-09-10 13:35:04 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PostsController#dashboard as HTML
+Completed 406 Not Acceptable in 38ms (ActiveRecord: 0.0ms | Allocations: 3530)
+
+
+  
+ActionController::MissingExactTemplate (PostsController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/dashboard" for ::1 at 2023-09-10 13:35:41 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 16.7ms | Allocations: 901)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 5551.6ms | Allocations: 95208)
+  Rendered layouts/_flashmessages.html.erb (Duration: 16.9ms | Allocations: 166)
+  Rendered layout layouts/application.html.erb (Duration: 5571.3ms | Allocations: 96950)
+Completed 200 OK in 5610ms (Views: 5569.8ms | ActiveRecord: 4.3ms | Allocations: 104319)
+
+
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:35:47 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/" for ::1 at 2023-09-10 13:36:00 +0800
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PostsController#dashboard as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 571)
+
+
+  
+ActionController::MissingExactTemplate (PostsController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-09-10 13:36:03 +0800
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PostsController#dashboard as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 572)
+
+
+  
+ActionController::MissingExactTemplate (PostsController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-09-10 13:36:04 +0800
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PostsController#dashboard as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 573)
+
+
+  
+ActionController::MissingExactTemplate (PostsController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-09-10 13:36:04 +0800
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PostsController#dashboard as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 570)
+
+
+  
+ActionController::MissingExactTemplate (PostsController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-09-10 13:36:04 +0800
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PostsController#dashboard as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 1716)
+
+
+  
+ActionController::MissingExactTemplate (PostsController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/sign_up" for ::1 at 2023-09-10 13:36:15 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+Started GET "/users/sign_in" for ::1 at 2023-09-10 13:36:22 +0800
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1960)
+
+
+Started GET "/dashboard" for ::1 at 2023-09-10 13:36:22 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 17.1ms | Allocations: 550)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 60.4ms | Allocations: 6913)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.6ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 8192)
+Completed 200 OK in 77ms (Views: 62.7ms | ActiveRecord: 2.9ms | Allocations: 10558)
+
+
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:36:22 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/dashboard/users/signup" for ::1 at 2023-09-10 13:36:33 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/users/signup"):
+  
+Started GET "/dashboard/users/sign_up" for ::1 at 2023-09-10 13:36:38 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/users/sign_up"):
+  
+Started GET "/dashboard" for ::1 at 2023-09-10 13:36:43 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.2ms | Allocations: 550)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 56.9ms | Allocations: 6864)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 8139)
+Completed 200 OK in 75ms (Views: 61.1ms | ActiveRecord: 0.5ms | Allocations: 10475)
+
+
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:36:43 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2023-09-10 13:36:54 +0800
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 25ms (ActiveRecord: 0.1ms | Allocations: 3087)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:36:54 +0800
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 17.2ms | Allocations: 1094)
+  Rendered pages/home.html.erb within layouts/application (Duration: 48.4ms | Allocations: 2773)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 4411)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 5176)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:36:57 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3591)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3853)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-09-10 13:37:00 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 769)
+  Rendered devise/shared/_links.html.erb (Duration: 15.0ms | Allocations: 702)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 40.6ms | Allocations: 6245)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 7836)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 9377)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-09-10 13:37:24 +0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 773)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 9.9ms | Allocations: 231)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 144)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 4933)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 6525)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 8028)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:02 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3591)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 3856)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:03 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3591)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3855)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:03 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3591)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3855)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-09-10 13:38:04 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 742)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3920)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5499)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 6293)
+
+
+Started GET "/about" for ::1 at 2023-09-10 13:38:04 +0800
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 13.8ms | Allocations: 103)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2200)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 2522)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:08 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 721)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2055)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3613)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3878)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-09-10 13:38:10 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 734)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3890)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5448)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6226)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:11 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2034)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3592)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3857)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:12 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3591)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3857)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:13 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3591)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 3856)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:13 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 713)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2033)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3591)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3856)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-09-10 13:38:14 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 734)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3881)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5439)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6223)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-10 13:38:18 +0800
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"genesis", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(name) = 'genesis' OR lower(email) = 'genesis') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:20:in `find_for_database_authentication'
+Redirected to http://localhost:3000/dashboard
+Completed 303 See Other in 440ms (ActiveRecord: 0.2ms | Allocations: 9389)
+
+
+Started GET "/dashboard" for ::1 at 2023-09-10 13:38:18 +0800
+Processing by LessonsController#dashboard as TURBO_STREAM
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 551)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 14.0ms | Allocations: 6869)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8145)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 10502)
+
+
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:19 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/posts/1" for ::1 at 2023-09-10 13:38:21 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:9
+  Rendered posts/_post.html.erb (Duration: 8.1ms | Allocations: 4163)
+  Rendered posts/show.html.erb within layouts/application (Duration: 63.4ms | Allocations: 5289)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 6876)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.3ms | Allocations: 9031)
+
+
+Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 13:38:21 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for ::1 at 2023-09-10 13:38:22 +0800
+Processing by LessonsController#dashboard as HTML
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:22 +0800
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.6ms | Allocations: 581)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 23.5ms | Allocations: 12740)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 14595)
+Completed 200 OK in 88ms (Views: 29.5ms | ActiveRecord: 0.6ms | Allocations: 37793)
+
+
+Started GET "/posts/1" for ::1 at 2023-09-10 13:38:23 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:9
+  Rendered posts/_post.html.erb (Duration: 24.8ms | Allocations: 3687)
+  Rendered posts/show.html.erb within layouts/application (Duration: 26.0ms | Allocations: 4336)
+Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 13:38:23 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 27766)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.3ms | Allocations: 29220)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-09-10 13:38:23 +0800
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.1ms | Allocations: 1912)
+
+
+Started GET "/" for ::1 at 2023-09-10 13:38:23 +0800
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 721)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2059)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3626)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3894)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-09-10 13:38:25 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 734)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3896)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5454)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-10 13:38:29 +0800
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"genesis", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(name) = 'genesis' OR lower(email) = 'genesis') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:20:in `find_for_database_authentication'
+Redirected to http://localhost:3000/dashboard
+Completed 303 See Other in 330ms (ActiveRecord: 0.2ms | Allocations: 2034)
+
+
+Started GET "/dashboard" for ::1 at 2023-09-10 13:38:29 +0800
+Processing by LessonsController#dashboard as TURBO_STREAM
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 550)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 10.5ms | Allocations: 6845)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 8121)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 10459)
+
+
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:29 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/posts/1" for ::1 at 2023-09-10 13:38:32 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:9
+  Rendered posts/_post.html.erb (Duration: 21.0ms | Allocations: 3693)
+  Rendered posts/show.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4327)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 5884)
+Completed 200 OK in 36ms (Views: 26.9ms | ActiveRecord: 0.4ms | Allocations: 7072)
+
+
+Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 13:38:32 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for ::1 at 2023-09-10 13:38:35 +0800
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:35 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 21.8ms | Allocations: 10592)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 66.3ms | Allocations: 33957)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 35911)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 0.6ms | Allocations: 38250)
+
+
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:35 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/posts/1" for ::1 at 2023-09-10 13:38:36 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 13:38:36 +0800
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:9
+  Rendered posts/_post.html.erb (Duration: 12.6ms | Allocations: 4532)
+  Rendered posts/show.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5201)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 6783)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 7978)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for ::1 at 2023-09-10 13:38:37 +0800
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:37 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.9ms | Allocations: 550)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 35.0ms | Allocations: 14270)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 16045)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.6ms | Allocations: 18401)
+
+
+Started GET "/posts/1" for ::1 at 2023-09-10 13:38:38 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:9
+  Rendered posts/_post.html.erb (Duration: 21.2ms | Allocations: 3687)
+Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 13:38:38 +0800
+  Rendered posts/show.html.erb within layouts/application (Duration: 28.0ms | Allocations: 5093)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 6667)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.3ms | Allocations: 8589)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for ::1 at 2023-09-10 13:38:40 +0800
+Started GET "/asset/js/script.js" for ::1 at 2023-09-10 13:38:40 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+  ↳ app/controllers/lessons_controller.rb:49:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:48:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:31
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.4ms | Allocations: 550)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:45
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 29.0ms | Allocations: 14778)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 22767)
+Completed 200 OK in 109ms (Views: 56.7ms | ActiveRecord: 0.6ms | Allocations: 44308)
+
+
+Started GET "/posts/1" for ::1 at 2023-09-10 13:38:51 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:68:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_post.html.erb:9
+  Rendered posts/_post.html.erb (Duration: 10.2ms | Allocations: 3974)
+  Rendered posts/show.html.erb within layouts/application (Duration: 12.9ms | Allocations: 4978)
+Started GET "/Roboto-Medium.ttf" for ::1 at 2023-09-10 13:38:51 +0800
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7450)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.4ms | Allocations: 8636)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
