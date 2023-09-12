@@ -5,19 +5,12 @@
  <div class="dashboard">
         <section class="navigation">
             <ul>
-            <li> <%= current_user.name%> </li>
-
-
             </ul>
-            <%= button_to "Sign Out", destroy_user_session_path, method: :delete%>
-            <%= image_tag("Logopng.png", alt:"Code Verse Hub", class:"dashboard-logo")%>
-            <div>
-                <%= image_tag("dashboard_icon.png", alt:"dashboard", class:"icons")%>
-                <%= image_tag("lesson_icon.png", alt:"lesson", class:"icons")%>
-                <%= image_tag("settings_icon.png", alt:"settings", class:"icons")%>
+            <div id="nav-content">
+                <p><%= link_to current_user.name.capitalize, dashboard_path, class:"link-text", id:"username"%> </p>
+               <p> <%= link_to "Sign Out", destroy_user_session_path, data: {turbo_method: :delete}, class:"link-text" %> </p>
                <!-- <img src="asset/images/001-quiz.png" alt="quiz" class="icons"> *optional kung lalagyan ng quizzes*-->
             </div>
-            <%= image_tag("User_Avatar.png", alt:"user image", class:"user")%>
 
         </section>
         

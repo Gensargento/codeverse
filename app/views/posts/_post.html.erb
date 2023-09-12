@@ -24,6 +24,7 @@
     <h1 class= "tittleh1">
     <%= post.title %></h1>
     <p>  <%=simple_format(post.body)%> </p>
+    <%= button_to "Mark Complete", dashboard_path, id:"complete_button"%>
   </div>
 </div>
 </body>
