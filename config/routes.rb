@@ -11,7 +11,7 @@
   get "dashboard", to: "lessons#dashboard"
   get "show_lessons", to: "lessons#show_lessons"
   authenticated :user do
-     root to: 'posts#dashboard', as: :authenticated_root
+     root to: 'lessons#dashboard', as: :authenticated_root
   end
   root "pages#home"
   resources :posts
