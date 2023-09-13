@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Medium.ttf");
+  font-display: swap;
+}
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+/*=====================sidebar===================*/
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Roboto";
+  color: white;
+}
+#user-name {
+  font-size: 60px;
+}
+
+#admin_edit {
+  background-color: red;
+}
+.quote {
+  text-align: center;
+  margin: auto;
+  background-color: #f7f7f7;
+  padding: 10px;
+  width: 500px;
+  border: 1px solid #f7f7f7;
+  border-radius: 30px;
+  font-size: 20px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.main .sidebar {
+  background: rgb(167, 92, 88, 0.5);
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.main .sidebar ul {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.main .sidebar ul li {
+  font-family: "Roboto-Black", sans-serif;
+  font-size: 40px;
+}
+.main .content {
+  font-family: "Roboto-Medium", sans-serif;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-family: "Roboto";
+  overflow: auto;
+}
+.wrapper {
+  width: 300px;
+  padding: 20px 0;
+  transition: all 2s ease;
+}
+.wrapper .sidebar .username {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.wrapper .sidebar .username h3 {
+  font-size: 40px;
+  margin: 10, 0 5px;
+}
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+/*
+.wrapper .sidebar lu li a .icon{
+  margin: 0 auto;
+  display: inline-block;
+}
+*/
+
+/*==========hover==================*/
+.main .sidebar ul li a:hover,
+.main .sidebar ul li a:hover.active {
+  color: black;
+  background: white;
+  border-right: 2px solid rgba(167, 92, 88, 0.5);
+}
+.main.sidebar ul li a:hover::before,
+.main .sidebar ul li a:hover.active::before {
+  display: block;
+}
+.main .section {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5 ease;
+}
+.wrapper .section .top_navbar {
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+.wrapper .section .top_navbar .hamburger a {
+  font-size: 28px;
+  border: 4px;
+}
+.wrapper .section .top_navbar .hamburger a:hover {
+  border: 4px;
+}
+body.active .wrapper .sidebar {
+  left: -225px;
+}
+
+body.active .wrapper .section {
+  margin-left: 0;
+  width: 100%;
+}
+
+/*========================================*/
+.post_background {
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 80px;
+  justify-content: center;
+}
+.Navdesign {
+  background-color: aqua;
+  color: whitesmoke;
+  padding: 10px 10px;
+  font-size: 16px;
+  position: flex;
+}
+
+.LessonNav .span {
+  background-color: white;
+  width: 60%;
+  margin-bottom: 0;
+}
+.Navplatform {
+  background-color: gray;
+  border-radius: 20px;
+  bottom: 0;
+  left: 0;
+  max-width: 61.5rem;
+  position: fixed;
+  left: 40%;
+}
+
+.post_background .titleh1 {
+  margin: 0, 0, 0, 0;
+  font-size: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+#complete_button {
+  width: 170px;
+  padding: 20px 5px 20px 5px;
+  margin: 20px auto;
+  display: block;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background-color: #33b249;
+  text-align: center;
+}
