@@ -13,11 +13,37 @@ class PostsController < ApplicationController
   # GET /posts/1 or /posts/1.json
   def show
      @post = Post.find(params[:id])
+     @lesson = find_current_lesson
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+  end
+
+  def toggle_complete
+    @lesson = find_current_lesson
+    @lesson.is_completed = !@lesson.is_completed
+    @lesson.save
+    post = Post.find(params[:id])
+    redirect_to post_path(post)
+  end
+
+  def find_current_lesson
+    current_post = Post.find(params[:id])
+    lessons = lessons_by_user
+    lessons.each do |lesson|
+      if current_post.id == lesson.number
+        return lesson
+      end
+    end
+  end
+
+  def lessons_by_user
+    lessons = Lesson.all 
+    lessons.select do |lesson|
+    lesson.user_id == current_user.id
+    end
   end
 
   # GET /posts/1/edit

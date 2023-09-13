@@ -8,4 +8,9 @@
 gen = User.create([{name: "gensargento" }, {password: "123456" }, {password_confirmation: "123456"}])
 ricsel = User.create([{name: "ricsel"}, {password: "123456" }, {password_confirmation: "123456"}])
 Lesson.create([{number: 1 }, {user_id: gen.id}])
-Lesson.create([{number: 1}, {user_id: ricsel.id}]
+Lesson.create([{number: 2 }, {user_id: gen.id}])
+Lesson.create([{number: 3 }, {user_id: gen.id}])
+Lesson.create([{number: 4 }, {user_id: gen.id}])
+Lesson.create([{number: 5 }, {user_id: gen.id}])
+Lesson.create([{number: 6 }, {user_id: gen.id}])
+Lesson.create([{number: 1}, {user_id: ricsel.id}])

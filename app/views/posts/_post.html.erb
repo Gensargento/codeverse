@@ -1,7 +1,7 @@
 <head>
 <%= stylesheet_link_tag "post.css" %>
-<%= javascript_import_module_tag "script" %>
-
+</head>
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/check.css' rel='stylesheet'>
 <body>
 <div class="main">
 <div class= "sidebar">
@@ -24,9 +24,13 @@
     <h1 class= "tittleh1">
     <%= post.title %></h1>
     <p>  <%=simple_format(post.body)%> </p>
-    <%= button_to "Mark Complete", dashboard_path, id:"complete_button"%>
+    <%if @lesson.is_completed == true %>
+    <i class="gg-check"></i>
+    <%= button_to "Lesson Completed", toggle_complete_path, method: :put, id:"complete_button"%>
+    <% else %>
+    <%= button_to "Mark Complete", toggle_complete_path, method: :put, id:"complete_button"%>
+    <% end %>
   </div>
 </div>
 </body>
-
-</head>
+<%= javascript_import_module_tag "script" %>

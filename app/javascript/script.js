@@ -1,13 +1,16 @@
 const ctx = document.getElementById("myChart");
-let finishedLessons = parseInt(document.getElementById("completed"));
+const finishedLessons = document.getElementById("finished").innerHTML;  
+const ongoingLessons = document.getElementById("ongoing").innerHTML;
+console.log(finishedLessons);
+
 new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ["Finished", "ongoing", "Stalled"],
+    labels: ["Finished", "Ongoing", "Stalled"],
     datasets: [
       {
         label: "# of Votes",
-        data: [finishedLessons, 2, 0],
+        data: [finishedLessons, ongoingLessons, 0],
         borderWidth: 1,
       },
     ],

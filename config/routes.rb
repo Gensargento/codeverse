@@ -7,6 +7,7 @@
     }
     # Defines the root path route ("/")
   # root "articles#index"
+  put 'posts/:id/toggle_complete', to: 'posts#toggle_complete', as: 'toggle_complete'
   get "about", to: "pages#about"
   get "dashboard", to: "lessons#dashboard"
   get "show_lessons", to: "lessons#show_lessons"

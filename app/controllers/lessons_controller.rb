@@ -18,8 +18,19 @@ class LessonsController < ApplicationController
     @lessons = lessons_by_user
     @post = Post.all
     @completed_lessons = count_finished_lessons
+    @ongoing_lessons = count_ongoing_lessons
   end
 
+  def count_ongoing_lessons
+    lesson = lessons_by_user
+    count = 0
+    lesson.each do |lesson|
+      if lesson.is_completed == false
+        count += 1
+      end
+    end
+    return count
+  end
   def count_finished_lessons
     lesson = lessons_by_user
     count = 0
