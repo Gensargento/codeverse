@@ -23,6 +23,7 @@ body {
 a {
   text-decoration: none;
   font-family: "Roboto";
+  / 
   color: white;
 }
 #user-name {
@@ -196,4 +197,45 @@ body.active .wrapper .section {
   color: white;
   background-color: #33b249;
   text-align: center;
+}
+/*======
+media 411px
+======*/
+
+@media screen and (max-width: 411px){
+  .main .sidebar {
+    width: 160px;
+  }
+  .main .sidebar ul li {
+    font-size: 20px;
+    padding-bottom: 2vh;
+  }
+  #user-name {
+    font-size: 25px;
+    padding-bottom: 2vh;
+  }
+  .main .content h1 {
+    font-size: 25px;
+  }
+  .main .content h2 {
+    font-size: 18px;
+  }
+  #text {
+    font-size: 6px;
+  }
+  .quote {
+    text-align: none;
+    width: 250px;
+    margin: none;
+  }
+}
+/*======
+media 411px
+======*/
+@media screen and (max-width: 540px){
+  .main .content .quote {
+    text-align: none;
+    width: 250px;
+    margin: none;
+  }
 }

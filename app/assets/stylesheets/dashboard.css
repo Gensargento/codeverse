@@ -224,7 +224,7 @@ Media screen 768xp
 @media only screen and (min-width: 768px) {
   section.main .lesson_list {
     display: flex;
-    width: 1000px;
+    width: 910px;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -307,4 +307,18 @@ Media screen 1024px
 /*My lessons end*/
 .material-symbols-rounded {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+/*=========
+Media screen 540px
+============*/
+@media only screen and (max-width: 540px) {
+  .dashboard .secondary .chart {
+    width: 100%;
+  }
+  section.main .lesson_list {
+    flex-direction: column;
+  }
+  .dashboard .main .lesson_list .dashboard_lesson .lesson {
+    width:100%;
+  }
 }

@@ -148,3 +148,43 @@ ul li:hover::after {
 a {
   text-decoration: none;
 }
+
+/*=========
+Media screen 540xp
+============*/
+@media only screen and (max-width: 540px) {
+  .content h1 {
+    font-size: 40px;
+  }
+  #logo {
+    width: 100px;
+    margin-left: 5px;
+  }
+  
+}
+
+/*=========
+Media screen 375xp
+============*/
+@media only screen and (max-width: 375px) {
+  .content h1 {
+    font-size: 40px;
+  }
+  #logo {
+    width: 100px;
+    margin-left: 5px;
+  }
+}
+/*=========
+Media screen 280xp
+============*/
+@media only screen and (max-width: 280px) {
+  .content h1 {
+    font-size: 40px;
+  }
+  #logo {
+    width: 70px;
+    margin-left: 3px;
+    margin-top: 3px;
+  }
+}
