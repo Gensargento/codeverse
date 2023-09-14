@@ -34792,3 +34792,1235 @@ Started GET "/asset/js/script.js" for ::1 at 2023-09-12 19:16:01 +0800
   
 ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
   
+Started GET "/posts/edit/1" for 127.0.0.1 at 2023-09-15 06:49:55 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts/edit/1"):
+  
+Started GET "/posts/1/edit" for 127.0.0.1 at 2023-09-15 06:50:20 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 27.0ms | Allocations: 6871)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 28.2ms | Allocations: 7263)
+  Rendered layouts/_flashmessages.html.erb (Duration: 3.3ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 623.6ms | Allocations: 141026)
+Completed 200 OK in 785ms (Views: 626.4ms | ActiveRecord: 0.9ms | Allocations: 152466)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2023-09-15 06:55:55 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Introduction to Ruby", "body"=>"<h2>What is Ruby?</h2>\nRuby is a high-level general purpose programming language made by Yukihiro \"Matz\" Matsumoto. It gained popularity during the early 20s because of Ruby on Rails, a server-side framework for web applications. \n<br/>\n<h2>Why Learn Ruby? </h2>\nRuby is one of the easiest programming language to learn and it's easy to learn as Python. The syntax for Ruby resembles the English language a lot. As Yukihiro Matsumoto puts it, \n<br/>\n<p class=\"quote\">\"I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy\". </p>\n<br>\nWith Ruby, it's easier to focus on the concepts because the syntax is very simple compared to other programming languages. As a beginner, it's very important to be able to think like a programmer that's why it's important to learn using a simple language first in order to not discourage beginners. If you want to dive into web development, Ruby on Rails is your best bet because it's made with the same principle as Ruby. It's one of the easiest web framework to learn because of its simplicity. Not only that, many popular web apps such as Github, Airbnb, Shopify and Netflix is made on Ruby on Rails that's why you can guarantee its reliability.\n\n<h2> Setup </h2>\n<ol>\n<li>Download RubyInstaller <a href=\"https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-devkit-3.2.2-1-x64.exe\"> website and install it</a> </li>\n<li> After installing, download Vscode</li>\n<li> For most of our lessons, we're going to use irb\n<li> Tp\n</ol>"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "<h2>What is Ruby?</h2>\nRuby is a high-level general purpose programming language made by Yukihiro \"Matz\" Matsumoto. It gained popularity during the early 20s because of Ruby on Rails, a server-side framework for web applications. \n<br/>\n<h2>Why Learn Ruby? </h2>\nRuby is one of the easiest programming language to learn and it's easy to learn as Python. The syntax for Ruby resembles the English language a lot. As Yukihiro Matsumoto puts it, \n<br/>\n<p class=\"quote\">\"I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy\". </p>\n<br>\nWith Ruby, it's easier to focus on the concepts because the syntax is very simple compared to other programming languages. As a beginner, it's very important to be able to think like a programmer that's why it's important to learn using a simple language first in order to not discourage beginners. If you want to dive into web development, Ruby on Rails is your best bet because it's made with the same principle as Ruby. It's one of the easiest web framework to learn because of its simplicity. Not only that, many popular web apps such as Github, Airbnb, Shopify and Netflix is made on Ruby on Rails that's why you can guarantee its reliability.\n\n<h2> Setup </h2>\n<ol>\n<li>Download RubyInstaller <a href=\"https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-devkit-3.2.2-1-x64.exe\"> website and install it</a> </li>\n<li> After installing, download Vscode</li>\n<li> For most of our lessons, we're going to use irb\n<li> Tp\n</ol>"], ["updated_at", "2023-09-14 22:55:55.054833"], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (60.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 69ms (ActiveRecord: 61.5ms | Allocations: 4455)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:55:55 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.2ms | Allocations: 7379)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+app/controllers/posts_controller.rb:44:in `lessons_by_user'
+app/controllers/posts_controller.rb:34:in `find_current_lesson'
+app/controllers/posts_controller.rb:16:in `show'
+Started GET "/posts/1/edit" for 127.0.0.1 at 2023-09-15 06:56:40 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.0ms | Allocations: 1069)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1194)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3003)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 3763)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2023-09-15 06:56:42 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Introduction to Ruby", "body"=>"<h2>What is Ruby?</h2>\nRuby is a high-level general purpose programming language made by Yukihiro \"Matz\" Matsumoto. It gained popularity during the early 20s because of Ruby on Rails, a server-side framework for web applications. \n<br/>\n<h2>Why Learn Ruby? </h2>\nRuby is one of the easiest programming language to learn and it's easy to learn as Python. The syntax for Ruby resembles the English language a lot. As Yukihiro Matsumoto puts it, \n<br/>\n<p class=\"quote\">\"I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy\". </p>\n<br>\nWith Ruby, it's easier to focus on the concepts because the syntax is very simple compared to other programming languages. As a beginner, it's very important to be able to think like a programmer that's why it's important to learn using a simple language first in order to not discourage beginners. If you want to dive into web development, Ruby on Rails is your best bet because it's made with the same principle as Ruby. It's one of the easiest web framework to learn because of its simplicity. Not only that, many popular web apps such as Github, Airbnb, Shopify and Netflix is made on Ruby on Rails that's why you can guarantee its reliability.\n\n<h2> Setup </h2>\n<ol>\n<li>Download RubyInstaller <a href=\"https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-devkit-3.2.2-1-x64.exe\"> website and install it</a> </li>\n<li> After installing, download Vscode</li>\n<li> For most of our lessons, we're going to use irb\n<li> Tp\n</ol>"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1082)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:56:42 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2690)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+app/controllers/posts_controller.rb:44:in `lessons_by_user'
+app/controllers/posts_controller.rb:34:in `find_current_lesson'
+app/controllers/posts_controller.rb:16:in `show'
+Started GET "/posts/1/edit" for 127.0.0.1 at 2023-09-15 06:57:51 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:96:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.6ms | Allocations: 1167)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1311)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 17054)
+Completed 200 OK in 41ms (Views: 31.0ms | ActiveRecord: 1.2ms | Allocations: 21471)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2023-09-15 06:57:54 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Introduction to Ruby", "body"=>"<h2>What is Ruby?</h2>\nRuby is a high-level general purpose programming language made by Yukihiro \"Matz\" Matsumoto. It gained popularity during the early 20s because of Ruby on Rails, a server-side framework for web applications. \n<br/>\n<h2>Why Learn Ruby? </h2>\nRuby is one of the easiest programming language to learn and it's easy to learn as Python. The syntax for Ruby resembles the English language a lot. As Yukihiro Matsumoto puts it, \n<br/>\n<p class=\"quote\">\"I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy\". </p>\n<br>\nWith Ruby, it's easier to focus on the concepts because the syntax is very simple compared to other programming languages. As a beginner, it's very important to be able to think like a programmer that's why it's important to learn using a simple language first in order to not discourage beginners. If you want to dive into web development, Ruby on Rails is your best bet because it's made with the same principle as Ruby. It's one of the easiest web framework to learn because of its simplicity. Not only that, many popular web apps such as Github, Airbnb, Shopify and Netflix is made on Ruby on Rails that's why you can guarantee its reliability.\n\n<h2> Setup </h2>\n<ol>\n<li>Download RubyInstaller <a href=\"https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.2-1/rubyinstaller-devkit-3.2.2-1-x64.exe\"> website and install it</a> </li>\n<li> After installing, download Vscode</li>\n<li> For most of our lessons, we're going to use irb\n<li> Tp\n</ol>"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:96:in `set_post'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1199)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:57:54 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:96:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2075)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/posts_controller.rb:35:in `find_current_lesson'
+app/controllers/posts_controller.rb:16:in `show'
+Started GET "/" for 127.0.0.1 at 2023-09-15 06:58:26 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 1115)
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2772)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 18233)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 19694)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-15 06:58:28 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 781)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 702)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.7ms | Allocations: 6378)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 7978)
+Completed 200 OK in 65ms (Views: 44.0ms | ActiveRecord: 1.1ms | Allocations: 17121)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-15 06:58:32 +0800
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"genesis", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(name) = 'genesis' OR lower(email) = 'genesis') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:20:in `find_for_database_authentication'
+Redirected to http://127.0.0.1:3000/dashboard
+Completed 303 See Other in 410ms (ActiveRecord: 0.2ms | Allocations: 3917)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2023-09-15 06:58:32 +0800
+Processing by LessonsController#dashboard as TURBO_STREAM
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:60:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.8ms | Allocations: 850)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 7.2ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:42
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 30.7ms | Allocations: 13046)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 14369)
+Completed 200 OK in 48ms (Views: 32.6ms | ActiveRecord: 2.4ms | Allocations: 20527)
+
+
+Started GET "/asset/js/script.js" for 127.0.0.1 at 2023-09-15 06:58:32 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:58:39 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 7.3ms | Allocations: 4292)
+  Rendered posts/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5202)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 6797)
+Completed 200 OK in 21ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 10879)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:58:39 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/1/edit" for 127.0.0.1 at 2023-09-15 06:59:08 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.3ms | Allocations: 1091)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1218)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 1.8ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3751)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 4507)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2023-09-15 06:59:15 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Introduction to Ruby", "body"=>"<h2>What is Ruby?</h2>\nRuby is a high-level general purpose programming language made by Yukihiro \"Matz\" Matsumoto. It gained popularity during the early 20s because of Ruby on Rails, a server-side framework for web applications. \n<br/>\n<h2>Why Learn Ruby? </h2>\nRuby is one of the easiest programming language to learn and it's easy to learn as Python. The syntax for Ruby resembles the English language a lot. As Yukihiro Matsumoto puts it, \n<br/>\n<p class=\"quote\">\"I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy\". </p>\n<br>\nWith Ruby, it's easier to focus on the concepts because the syntax is very simple compared to other programming languages. As a beginner, it's very important to be able to think like a programmer that's why it's important to learn using a simple language first in order to not discourage beginners. If you want to dive into web development, Ruby on Rails is your best bet because it's made with the same principle as Ruby. It's one of the easiest web framework to learn because of its simplicity. Not only that, many popular web apps such as Github, Airbnb, Shopify and Netflix is made on Ruby on Rails that's why you can guarantee its reliability.\n"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "<h2>What is Ruby?</h2>\nRuby is a high-level general purpose programming language made by Yukihiro \"Matz\" Matsumoto. It gained popularity during the early 20s because of Ruby on Rails, a server-side framework for web applications. \n<br/>\n<h2>Why Learn Ruby? </h2>\nRuby is one of the easiest programming language to learn and it's easy to learn as Python. The syntax for Ruby resembles the English language a lot. As Yukihiro Matsumoto puts it, \n<br/>\n<p class=\"quote\">\"I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy\". </p>\n<br>\nWith Ruby, it's easier to focus on the concepts because the syntax is very simple compared to other programming languages. As a beginner, it's very important to be able to think like a programmer that's why it's important to learn using a simple language first in order to not discourage beginners. If you want to dive into web development, Ruby on Rails is your best bet because it's made with the same principle as Ruby. It's one of the easiest web framework to learn because of its simplicity. Not only that, many popular web apps such as Github, Airbnb, Shopify and Netflix is made on Ruby on Rails that's why you can guarantee its reliability.\n"], ["updated_at", "2023-09-14 22:59:15.076221"], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (102.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 110ms (ActiveRecord: 103.3ms | Allocations: 3012)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:59:15 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.5ms | Allocations: 3182)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3553)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5098)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 8235)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:15 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started PUT "/posts/1/toggle_complete" for 127.0.0.1 at 2023-09-15 06:59:17 +0800
+Processing by PostsController#toggle_complete as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mLesson Update (0.2ms)[0m  [1m[33mUPDATE "lessons" SET "updated_at" = ?, "is_completed" = ? WHERE "lessons"."id" = ?[0m  [["updated_at", "2023-09-14 22:59:17.441177"], ["is_completed", 0], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mTRANSACTION (89.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `toggle_complete'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 135ms (ActiveRecord: 90.0ms | Allocations: 17384)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:59:17 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.8ms | Allocations: 3189)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3559)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5124)
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 4.2ms | Allocations: 8238)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:17 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for 127.0.0.1 at 2023-09-15 06:59:21 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:60:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.7ms | Allocations: 550)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.9ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:42
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 19.5ms | Allocations: 9863)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 11148)
+Completed 200 OK in 27ms (Views: 20.7ms | ActiveRecord: 1.1ms | Allocations: 13989)
+
+
+Started GET "/asset/js/script.js" for 127.0.0.1 at 2023-09-15 06:59:21 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:59:22 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 6.8ms | Allocations: 3187)
+  Rendered posts/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3554)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5120)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 0.4ms | Allocations: 8248)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:22 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started PUT "/posts/1/toggle_complete" for 127.0.0.1 at 2023-09-15 06:59:23 +0800
+Processing by PostsController#toggle_complete as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mLesson Update (0.2ms)[0m  [1m[33mUPDATE "lessons" SET "updated_at" = ?, "is_completed" = ? WHERE "lessons"."id" = ?[0m  [["updated_at", "2023-09-14 22:59:23.335714"], ["is_completed", 1], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mTRANSACTION (53.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `toggle_complete'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 65ms (ActiveRecord: 54.1ms | Allocations: 5471)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2023-09-15 06:59:23 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.7ms | Allocations: 3187)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3557)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5122)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 8226)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:23 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for 127.0.0.1 at 2023-09-15 06:59:24 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:60:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 550)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 3.7ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 2.6ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:42
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 23.9ms | Allocations: 9863)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 11148)
+Completed 200 OK in 32ms (Views: 25.5ms | ActiveRecord: 1.1ms | Allocations: 13991)
+
+
+Started GET "/asset/js/script.js" for 127.0.0.1 at 2023-09-15 06:59:24 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 06:59:25 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 4.6ms | Allocations: 2709)
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3076)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4641)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 7751)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:25 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 06:59:28 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.2ms | Allocations: 2709)
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3076)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4641)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 7758)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:28 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2/edit" for 127.0.0.1 at 2023-09-15 06:59:31 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.1ms | Allocations: 1045)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1170)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 2.0ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3703)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 4459)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2023-09-15 06:59:38 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Printing in Ruby", "body"=>"Printing in Ruby is actually simple\n\nputs \"Hello World!\"\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n\nputs \"Hello World!\"\nputs \"Goodbye\"\n\nThe output is going to be\n\nHello World\nGoodbye\n\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print the recipe for sinigang in this specific order:\n\t1. Pork\n\t2. Tomato\n\t3. Onion\n\t4. Fish Sauce\n\t5. Gabi\n\t6. Radish\n"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Printing in Ruby is actually simple\n\nputs \"Hello World!\"\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n\nputs \"Hello World!\"\nputs \"Goodbye\"\n\nThe output is going to be\n\nHello World\nGoodbye\n\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print the recipe for sinigang in this specific order:\n\t1. Pork\n\t2. Tomato\n\t3. Onion\n\t4. Fish Sauce\n\t5. Gabi\n\t6. Radish\n"], ["updated_at", "2023-09-14 22:59:38.996489"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (57.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 64ms (ActiveRecord: 58.1ms | Allocations: 2894)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 06:59:39 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 4.7ms | Allocations: 2704)
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3075)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4620)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 7739)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 06:59:39 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2/edit" for 127.0.0.1 at 2023-09-15 06:59:52 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 1048)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1173)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 2.7ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3706)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 4462)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2023-09-15 07:00:14 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Printing in Ruby", "body"=>"Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n\n<div>puts \"Hello World!\"\nputs \"Goodbye\"</div>\n\nThe output is going to be\n\nHello World\nGoodbye\n\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print the recipe for sinigang in this specific order:\n\t1. Pork\n\t2. Tomato\n\t3. Onion\n\t4. Fish Sauce\n\t5. Gabi\n\t6. Radish\n"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n\n<div>puts \"Hello World!\"\nputs \"Goodbye\"</div>\n\nThe output is going to be\n\nHello World\nGoodbye\n\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print the recipe for sinigang in this specific order:\n\t1. Pork\n\t2. Tomato\n\t3. Onion\n\t4. Fish Sauce\n\t5. Gabi\n\t6. Radish\n"], ["updated_at", "2023-09-14 23:00:14.758814"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (58.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 68ms (ActiveRecord: 59.4ms | Allocations: 2885)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:00:14 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 7.2ms | Allocations: 2931)
+  Rendered posts/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3302)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4868)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 8013)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:00:14 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2/edit" for 127.0.0.1 at 2023-09-15 07:00:29 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.9ms | Allocations: 1060)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1185)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 1.8ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3718)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 4474)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2023-09-15 07:01:16 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Printing in Ruby", "body"=>"Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print the recipe for sinigang in this specific order:\n\t1. Pork\n\t2. Tomato\n\t3. Onion\n\t4. Fish Sauce\n\t5. Gabi\n\t6. Radish\n"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print the recipe for sinigang in this specific order:\n\t1. Pork\n\t2. Tomato\n\t3. Onion\n\t4. Fish Sauce\n\t5. Gabi\n\t6. Radish\n"], ["updated_at", "2023-09-14 23:01:16.171244"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (56.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 63ms (ActiveRecord: 56.6ms | Allocations: 2881)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:01:16 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.3ms | Allocations: 3403)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3774)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5319)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 8447)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:01:16 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2/edit" for 127.0.0.1 at 2023-09-15 07:01:24 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.9ms | Allocations: 1060)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1185)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 1.8ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3718)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 4474)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2023-09-15 07:01:58 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Printing in Ruby", "body"=>"Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print this in a specific order.\n\t1. Burger\n\t2. Juice\n\t3. Fries\n\t4. Coke\n\t5. Pie\n"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print this in a specific order.\n\t1. Burger\n\t2. Juice\n\t3. Fries\n\t4. Coke\n\t5. Pie\n"], ["updated_at", "2023-09-14 23:01:58.374570"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (60.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 67ms (ActiveRecord: 60.8ms | Allocations: 2866)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:01:58 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.2ms | Allocations: 3400)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3771)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5316)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 8420)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:01:58 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2/edit" for 127.0.0.1 at 2023-09-15 07:02:11 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.2ms | Allocations: 1045)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1170)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 1.8ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3703)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 4459)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2023-09-15 07:02:35 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Printing in Ruby", "body"=>"Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print this in a specific order.\n<div class=\"quote\">\n\t1. Burger\n\t2. Juice\n\t3. Fries\n\t4. Coke\n\t5. Pie\n</div>"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print this in a specific order.\n<div class=\"quote\">\n\t1. Burger\n\t2. Juice\n\t3. Fries\n\t4. Coke\n\t5. Pie\n</div>"], ["updated_at", "2023-09-14 23:02:35.737166"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (80.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 88ms (ActiveRecord: 80.8ms | Allocations: 2878)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:02:35 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 6.1ms | Allocations: 3491)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3862)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5428)
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 8549)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:02:35 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/posts/2/edt" for 127.0.0.1 at 2023-09-15 07:02:47 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/posts/2/edt"):
+  
+Started GET "/posts/2/edit" for 127.0.0.1 at 2023-09-15 07:02:51 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.0ms | Allocations: 1042)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1167)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_flashmessages.html.erb:1
+  Rendered layouts/_flashmessages.html.erb (Duration: 2.7ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3700)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 4456)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2023-09-15 07:03:01 +0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Printing in Ruby", "body"=>"Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print this in a specific order:\n<div class=\"quote\">\n\t1. Burger\n\t2. Juice\n\t3. Fries\n\t4. Coke\n\t5. Pie\n</div>"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Printing in Ruby is actually simple\n\n<div class=\"quote\">puts \"Hello World!\" </div>\n\nThat's it, that's the syntax that you're going to use to print strings in ruby. The puts method prints the string inside the quotation mark and prints it in the console.  When you use the puts method, it adds a new line after printing. So if you put\n<br/>\n<div class=\"quote\">puts \"Hello World!\"\nputs \"Goodbye\"</div>\n<br/>\nThe output is going to be\n<br/>\n<div class=\"quote\">Hello World\nGoodbye</div>\n<br/>\nExercise:\n1. Print the phrase \"Imagination is more important than knowledge\"\n2. Print this in a specific order:\n<div class=\"quote\">\n\t1. Burger\n\t2. Juice\n\t3. Fries\n\t4. Coke\n\t5. Pie\n</div>"], ["updated_at", "2023-09-14 23:03:01.121924"], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+  [1m[36mTRANSACTION (152.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:71:in `block in update'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 159ms (ActiveRecord: 152.5ms | Allocations: 2893)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:03:01 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.7ms | Allocations: 3486)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3857)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5402)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 8518)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:03:01 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started PUT "/posts/2/toggle_complete" for 127.0.0.1 at 2023-09-15 07:03:04 +0800
+Processing by PostsController#toggle_complete as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mLesson Update (0.2ms)[0m  [1m[33mUPDATE "lessons" SET "updated_at" = ?, "is_completed" = ? WHERE "lessons"."id" = ?[0m  [["updated_at", "2023-09-14 23:03:04.142063"], ["is_completed", 1], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mTRANSACTION (62.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `toggle_complete'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 74ms (ActiveRecord: 63.8ms | Allocations: 5466)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:03:04 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.5ms | Allocations: 3491)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3861)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5426)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 8551)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:03:04 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started PUT "/posts/2/toggle_complete" for 127.0.0.1 at 2023-09-15 07:03:05 +0800
+Processing by PostsController#toggle_complete as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mLesson Update (0.3ms)[0m  [1m[33mUPDATE "lessons" SET "updated_at" = ?, "is_completed" = ? WHERE "lessons"."id" = ?[0m  [["updated_at", "2023-09-14 23:03:05.904412"], ["is_completed", 0], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mTRANSACTION (72.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `toggle_complete'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 87ms (ActiveRecord: 73.0ms | Allocations: 5466)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:03:05 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 6.1ms | Allocations: 3491)
+  Rendered posts/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3861)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5426)
+Completed 200 OK in 17ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 8525)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:03:06 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started PUT "/posts/2/toggle_complete" for 127.0.0.1 at 2023-09-15 07:03:07 +0800
+Processing by PostsController#toggle_complete as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mLesson Update (0.2ms)[0m  [1m[33mUPDATE "lessons" SET "updated_at" = ?, "is_completed" = ? WHERE "lessons"."id" = ?[0m  [["updated_at", "2023-09-14 23:03:07.773303"], ["is_completed", 1], ["id", 2]]
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mTRANSACTION (69.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `toggle_complete'
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `toggle_complete'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 81ms (ActiveRecord: 70.7ms | Allocations: 5466)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2023-09-15 07:03:07 +0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:94:in `set_post'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:15:in `show'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `find_current_lesson'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/posts_controller.rb:44:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:45:in `block in lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 5.5ms | Allocations: 3491)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3861)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5426)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 8551)
+
+
+Started GET "/Roboto-Medium.ttf" for 127.0.0.1 at 2023-09-15 07:03:07 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Roboto-Medium.ttf"):
+  
+Started GET "/dashboard" for 127.0.0.1 at 2023-09-15 07:03:11 +0800
+Processing by LessonsController#dashboard as HTML
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:60:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 550)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:42
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 18.2ms | Allocations: 9862)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 11147)
+Completed 200 OK in 25ms (Views: 19.3ms | ActiveRecord: 1.3ms | Allocations: 13982)
+
+
+Started GET "/asset/js/script.js" for 127.0.0.1 at 2023-09-15 07:03:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-09-15 07:03:17 +0800
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 31ms (ActiveRecord: 0.1ms | Allocations: 8969)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-15 07:03:17 +0800
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 729)
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2082)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3674)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3945)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-15 07:03:18 +0800
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 742)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3923)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5489)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 6181)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-15 07:03:22 +0800
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"genesis", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(name) = 'genesis' OR lower(email) = 'genesis') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:20:in `find_for_database_authentication'
+Redirected to http://127.0.0.1:3000/dashboard
+Completed 303 See Other in 330ms (ActiveRecord: 0.2ms | Allocations: 1918)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2023-09-15 07:03:22 +0800
+Processing by LessonsController#dashboard as TURBO_STREAM
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:60:in `block in lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  [1m[36mCACHE Lesson Load (0.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:59:in `lessons_by_user'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/dashboard.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.2ms | Allocations: 550)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.1ms | Allocations: 548)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/dashboard.html.erb:29
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/lessons/_user_lesson.html.erb:2
+  Rendered lessons/_user_lesson.html.erb (Duration: 1.0ms | Allocations: 549)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/lessons/dashboard.html.erb:42
+  Rendered lessons/dashboard.html.erb within layouts/application (Duration: 18.2ms | Allocations: 9839)
+  Rendered layouts/_flashmessages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 11129)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 1.1ms | Allocations: 13974)
+
+
+Started GET "/asset/js/script.js" for 127.0.0.1 at 2023-09-15 07:03:22 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/asset/js/script.js"):
+  

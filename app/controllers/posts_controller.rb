@@ -40,10 +40,10 @@ class PostsController < ApplicationController
   end
 
   def lessons_by_user
-    lessons = Lesson.all 
-    lessons.select do |lesson|
-    lesson.user_id == current_user.id
-    end
+      lessons = Lesson.all 
+      lessons.select do |lesson|
+        lesson.user_id == current_user.id
+      end
   end
 
   # GET /posts/1/edit
