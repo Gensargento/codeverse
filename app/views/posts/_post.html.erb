@@ -23,6 +23,9 @@
   <div id="<%= dom_id post %>" class="content">
     <h1 class= "tittleh1">
     <%= post.title %></h1>
+    <% if post.id == 3 %>
+    <%= image_tag "dingdong.jpg" %>
+    <% end %>
     <p>  <%=simple_format(post.body)%> </p>
     <%if @lesson.is_completed == true %>
     <i class="gg-check"></i>

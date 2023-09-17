@@ -12,7 +12,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super do |created_user|
-      lesson = Lesson.create(number: 1, user_id: created_user.id)
+      Post.all.each_with_index do |post, index|
+      post_number = index + 1
+      lesson = Lesson.create(number: post_number, user_id: created_user.id)
+      end
     end
   end
 

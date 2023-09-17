@@ -19,11 +19,13 @@ body {
   min-height: 100%;
   overflow: hidden;
 }
-
+a:link, a:visited {
+  color: blue;
+  text-decoration: none;
+}
 a {
   text-decoration: none;
   font-family: "Roboto";
-  / 
   color: white;
 }
 #user-name {
